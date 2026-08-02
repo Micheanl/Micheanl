@@ -16,13 +16,6 @@
   <a href="https://fedoraproject.org"><img src="https://img.shields.io/badge/Fedora-51A2DA?style=flat-square&amp;logo=fedora&amp;logoColor=white" alt="Fedora"></a>
 </p>
 
-## Stats
-
-<div align="center">
-  <a href="https://github.com/Micheanl"><img src="https://img.shields.io/github/followers/Micheanl?style=flat-square&amp;logo=github&amp;label=Followers&amp;color=30363D" alt="Followers"></a>
-  <a href="https://github.com/Micheanl"><img src="https://img.shields.io/github/stars/Micheanl?style=flat-square&amp;logo=github&amp;label=Stars&amp;color=30363D" alt="Stars"></a>
-</div>
-
 ## Contributions
 
 <img alt="Retro berry purple snake contribution game" src="https://cdn.jsdelivr.net/gh/Micheanl/Micheanl@output/berry-snake.svg">
