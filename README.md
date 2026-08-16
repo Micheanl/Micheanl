@@ -1,5 +1,7 @@
 ## Stack
 
+    所有一切能让我长久喜欢的人和事物，都有拥有改变我的力量
+
 <p align="center">
   <a href="https://kotlinlang.org"><img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin"></a>
   <a href="https://www.java.com"><img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&amp;logo=openjdk&amp;logoColor=white" alt="Java"></a>
