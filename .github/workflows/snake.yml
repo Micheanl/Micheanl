@@ -28,13 +28,26 @@ jobs:
         run: sed -i 's/\$ commits eaten:/commits eaten:/' dist/berry-snake.svg
       - name: Keep snake visible with reduced motion
         run: "sed -i 's/animation:none !important/animation-duration: 60s !important/' dist/berry-snake.svg"
-      - name: Apply ocean blue palette
-        run: "sed -i 's/#0a0f0a/#06101f/g; s/#0d3d1a/#0b2545/g; s/#12742f/#124e78/g; s/#1fb84e/#1877b8/g; s/#39ff7a/#38bdf8/g; s/#d6ffe4/#e0f2fe/g; s/#3fa060/#7dd3fc/g; s/#123d1f/#164e75/g' dist/berry-snake.svg"
-      - name: Add ocean horizon gradient
+      - name: Create light and dark variants
         run: |
-          sed -i 's/#06101f/transparent/g; s/#7dd3fc/url(#snake-label)/g' dist/berry-snake.svg
-          sed -i 's|<style>|<defs><linearGradient id="snake-bg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#9bdcf5"/><stop offset="38%" stop-color="#5aa8d1"/><stop offset="70%" stop-color="#1b5b8c"/><stop offset="100%" stop-color="#06101f"/></linearGradient><linearGradient id="snake-label" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#075985"/><stop offset="52%" stop-color="#0c4a6e"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient></defs><rect width="771" height="151" rx="12" fill="url(#snake-bg)"/><style>|' dist/berry-snake.svg
-          sed -i 's|</style>|</style><style>.cnt { fill:url(#snake-label); }</style>|' dist/berry-snake.svg
+          cp dist/berry-snake.svg dist/berry-snake-light.svg
+          cp dist/berry-snake.svg dist/berry-snake-dark.svg
+      - name: Apply ocean blue palette
+        run: |
+          for file in dist/berry-snake.svg dist/berry-snake-light.svg dist/berry-snake-dark.svg; do
+            sed -i 's/#0a0f0a/#06101f/g; s/#0d3d1a/#0b2545/g; s/#12742f/#124e78/g; s/#1fb84e/#1877b8/g; s/#39ff7a/#38bdf8/g; s/#d6ffe4/#e0f2fe/g; s/#3fa060/#7dd3fc/g; s/#123d1f/#164e75/g' "$file"
+          done
+      - name: Add light ocean gradient
+        run: |
+          sed -i 's/#06101f/transparent/g; s/#7dd3fc/url(#snake-label-light)/g' dist/berry-snake-light.svg
+          sed -i 's|<style>|<defs><linearGradient id="snake-bg-light" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#eff9ff"/><stop offset="45%" stop-color="#c8eafb"/><stop offset="100%" stop-color="#78afd0"/></linearGradient><linearGradient id="snake-label-light" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#075985"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient></defs><rect width="771" height="151" rx="12" fill="url(#snake-bg-light)"/><style>|' dist/berry-snake-light.svg
+          sed -i 's|</style>|</style><style>.cnt { fill:url(#snake-label-light); }</style>|' dist/berry-snake-light.svg
+      - name: Add dark ocean gradient
+        run: |
+          sed -i 's/#06101f/transparent/g; s/#7dd3fc/url(#snake-label-dark)/g' dist/berry-snake-dark.svg
+          sed -i 's|<style>|<defs><linearGradient id="snake-bg-dark" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#3d87af"/><stop offset="38%" stop-color="#1f5c87"/><stop offset="70%" stop-color="#123d63"/><stop offset="100%" stop-color="#06101f"/></linearGradient><linearGradient id="snake-label-dark" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#bae6fd"/></linearGradient></defs><rect width="771" height="151" rx="12" fill="url(#snake-bg-dark)"/><style>|' dist/berry-snake-dark.svg
+          sed -i 's|</style>|</style><style>.cnt { fill:url(#snake-label-dark); }</style>|' dist/berry-snake-dark.svg
+          cp dist/berry-snake-dark.svg dist/berry-snake.svg
       - uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output

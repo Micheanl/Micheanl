@@ -20,4 +20,5 @@
 
 ## Contributions
 
-<img alt="Ocean blue snake contribution game" src="https://raw.githubusercontent.com/Micheanl/Micheanl/output/berry-snake.svg">
+<img alt="Ocean blue snake contribution game in light mode" src="https://raw.githubusercontent.com/Micheanl/Micheanl/output/berry-snake-light.svg#gh-light-mode-only">
+<img alt="Ocean blue snake contribution game in dark mode" src="https://raw.githubusercontent.com/Micheanl/Micheanl/output/berry-snake-dark.svg#gh-dark-mode-only">
