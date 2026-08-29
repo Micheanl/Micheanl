@@ -20,4 +20,4 @@
 
 ## Contributions
 
-<img alt="Retro berry purple snake contribution game" src="https://cdn.jsdelivr.net/gh/Micheanl/Micheanl@output/berry-snake.svg">
+<img alt="Ocean blue snake contribution game" src="https://cdn.jsdelivr.net/gh/Micheanl/Micheanl@output/berry-snake.svg">

@@ -28,8 +28,8 @@ jobs:
         run: sed -i 's/\$ commits eaten:/commits eaten:/' dist/berry-snake.svg
       - name: Keep snake visible with reduced motion
         run: "sed -i 's/animation:none !important/animation-duration: 60s !important/' dist/berry-snake.svg"
-      - name: Apply berry palette
-        run: "sed -i 's/#0a0f0a/#0e0512/g; s/#0d3d1a/#210a1e/g; s/#12742f/#3b102f/g; s/#1fb84e/#641849/g; s/#39ff7a/#c9368a/g; s/#d6ffe4/#ffd6ef/g; s/#3fa060/#d998c0/g; s/#123d1f/#4d1a3a/g' dist/berry-snake.svg"
+      - name: Apply ocean blue palette
+        run: "sed -i 's/#0a0f0a/#06101f/g; s/#0d3d1a/#0b2545/g; s/#12742f/#124e78/g; s/#1fb84e/#1877b8/g; s/#39ff7a/#38bdf8/g; s/#d6ffe4/#e0f2fe/g; s/#3fa060/#7dd3fc/g; s/#123d1f/#164e75/g' dist/berry-snake.svg"
       - uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
