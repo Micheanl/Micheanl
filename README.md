@@ -1,6 +1,6 @@
 ## Stack
 
-    It's raining in Macondo
+    不念过去，不畏将来。
 
 <p align="center">
   <a href="https://kotlinlang.org"><img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin"></a>
