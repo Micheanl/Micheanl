@@ -1,6 +1,11 @@
 ## Stack
+I am grateful to the many mentors online
+who have given me a solid foundation
+to study code and architectures
+that have been honed through extensive practice.
 
-    DUI
+I will not underestimate my own worth;
+persistence leads to success
 
 <p align="center">
   <a href="https://kotlinlang.org"><img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin"></a>
