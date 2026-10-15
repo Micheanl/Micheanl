@@ -25,5 +25,5 @@ persistence leads to success
 
 ## Contributions
 
-<img alt="Ocean blue snake contribution game in light mode" src="https://raw.githubusercontent.com/Micheanl/Micheanl/output/berry-snake-light.svg#gh-light-mode-only">
-<img alt="Ocean blue snake contribution game in dark mode" src="https://raw.githubusercontent.com/Micheanl/Micheanl/output/berry-snake-dark.svg#gh-dark-mode-only">
+<img alt="Red snake contribution game in light mode" src="https://raw.githubusercontent.com/Micheanl/Micheanl/output/berry-snake-light.svg#gh-light-mode-only">
+<img alt="Red snake contribution game in dark mode" src="https://raw.githubusercontent.com/Micheanl/Micheanl/output/berry-snake-dark.svg#gh-dark-mode-only">

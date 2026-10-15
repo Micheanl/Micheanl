@@ -32,20 +32,20 @@ jobs:
         run: |
           cp dist/berry-snake.svg dist/berry-snake-light.svg
           cp dist/berry-snake.svg dist/berry-snake-dark.svg
-      - name: Apply ocean blue palette
+      - name: Apply red palette
         run: |
           for file in dist/berry-snake.svg dist/berry-snake-light.svg dist/berry-snake-dark.svg; do
-            sed -i 's/#0a0f0a/#06101f/g; s/#0d3d1a/#0b2545/g; s/#12742f/#124e78/g; s/#1fb84e/#1877b8/g; s/#39ff7a/#38bdf8/g; s/#d6ffe4/#e0f2fe/g; s/#3fa060/#7dd3fc/g; s/#123d1f/#164e75/g' "$file"
+            sed -i 's/#0a0f0a/#1c0606/g; s/#0d3d1a/#450a0a/g; s/#12742f/#7f1d1d/g; s/#1fb84e/#b91c1c/g; s/#39ff7a/#ff5a5a/g; s/#d6ffe4/#fee2e2/g; s/#3fa060/#fca5a5/g; s/#123d1f/#611420/g' "$file"
           done
-      - name: Add light ocean gradient
+      - name: Add light red gradient
         run: |
-          sed -i 's/#06101f/transparent/g; s/#7dd3fc/url(#snake-label-light)/g' dist/berry-snake-light.svg
-          sed -i 's|<style>|<defs><linearGradient id="snake-bg-light" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#eff9ff"/><stop offset="45%" stop-color="#c8eafb"/><stop offset="100%" stop-color="#78afd0"/></linearGradient><linearGradient id="snake-label-light" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#075985"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient></defs><rect width="771" height="151" rx="12" fill="url(#snake-bg-light)"/><style>|' dist/berry-snake-light.svg
+          sed -i 's/#1c0606/transparent/g; s/#fca5a5/url(#snake-label-light)/g' dist/berry-snake-light.svg
+          sed -i 's|<style>|<defs><linearGradient id="snake-bg-light" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#fff1f1"/><stop offset="45%" stop-color="#f9d3d3"/><stop offset="100%" stop-color="#d08a8a"/></linearGradient><linearGradient id="snake-label-light" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="100%" stop-color="#7f1d1d"/></linearGradient></defs><rect width="771" height="151" rx="12" fill="url(#snake-bg-light)"/><style>|' dist/berry-snake-light.svg
           sed -i 's|</style>|</style><style>.cnt { fill:url(#snake-label-light); }</style>|' dist/berry-snake-light.svg
-      - name: Add dark ocean gradient
+      - name: Add dark red gradient
         run: |
-          sed -i 's/#06101f/transparent/g; s/#7dd3fc/url(#snake-label-dark)/g' dist/berry-snake-dark.svg
-          sed -i 's|<style>|<defs><linearGradient id="snake-bg-dark" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#3d87af"/><stop offset="38%" stop-color="#1f5c87"/><stop offset="70%" stop-color="#123d63"/><stop offset="100%" stop-color="#06101f"/></linearGradient><linearGradient id="snake-label-dark" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#bae6fd"/></linearGradient></defs><rect width="771" height="151" rx="12" fill="url(#snake-bg-dark)"/><style>|' dist/berry-snake-dark.svg
+          sed -i 's/#1c0606/transparent/g; s/#fca5a5/url(#snake-label-dark)/g' dist/berry-snake-dark.svg
+          sed -i 's|<style>|<defs><linearGradient id="snake-bg-dark" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#af3d47"/><stop offset="38%" stop-color="#871f29"/><stop offset="70%" stop-color="#631223"/><stop offset="100%" stop-color="#1c0606"/></linearGradient><linearGradient id="snake-label-dark" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="771" y2="0"><stop offset="0%" stop-color="#fee2e2"/><stop offset="100%" stop-color="#fecaca"/></linearGradient></defs><rect width="771" height="151" rx="12" fill="url(#snake-bg-dark)"/><style>|' dist/berry-snake-dark.svg
           sed -i 's|</style>|</style><style>.cnt { fill:url(#snake-label-dark); }</style>|' dist/berry-snake-dark.svg
           cp dist/berry-snake-dark.svg dist/berry-snake.svg
       - uses: crazy-max/ghaction-github-pages@v5
